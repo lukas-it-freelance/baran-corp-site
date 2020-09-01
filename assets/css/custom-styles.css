@@ -1,0 +1,32 @@
+/* CUSTOM STYLES, OVERRIDING BOOTSTRAP */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  font-weight: 400;
+  color: #333;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+a.link-underlined {
+  text-decoration: underline;
+}
