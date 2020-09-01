@@ -1,0 +1,26 @@
+{
+  "name": "baran-corp-site",
+  "version": "1.0.0",
+  "description": "this is an example for a static website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "build:css": "npm run css:scss && npm run css:autoprefixer",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "watch": "run-p serve watch:css"
+  },
+  "author": "you",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "browser-sync": "*",
+    "node-sass": "*",
+    "npm-run-all": "*",
+    "onchange": "*",
+    "postcss-cli": "*",
+    "stylelint": "*"
+  }
+}
